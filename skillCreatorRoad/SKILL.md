@@ -22,10 +22,9 @@ Skill tự động nhận diện hoặc nhận chỉ định chế độ qua câ
 
 | Chế độ | Đầu vào nhận diện | Khung đúc kết chuẩn mực (.md & Slide) |
 | :--- | :--- | :--- |
-| **1. `workshop` (Mặc định)** | Video (`.mp4`), Audio (`.m4a`/`.mp3`), Phụ đề (`.srt`) + Slide gốc | **5 Phần:** Tổng quan & 6 Thông điệp cốt lõi $\rightarrow$ Khung tư tưởng 3 lớp $\rightarrow$ Bản đồ lộ trình $\rightarrow$ Bảng khó khăn học viên 3 cột $\rightarrow$ Checklist 7-30-90 ngày & 10 câu hỏi tự vấn. |
-| **2. `book` (Đúc kết Sách)** | Sách `.pdf`, `.epub`, `.docx`, `.txt` hoặc audio sách nói | **5 Phần:** Bối cảnh & 6 Luận điểm gốc $\rightarrow$ Giải phẫu Mô hình/Nguyên lý cốt lõi $\rightarrow$ Case study đắt giá trong sách $\rightarrow$ Giới hạn áp dụng & ngộ nhận $\rightarrow$ Kế hoạch chuyển hóa hành động & Tóm tắt 1 trang. |
+| **1. `workshop` (Mặc định)** | Video (`.mp4`), Audio (`.m4a`/`.mp3`), Phụ đề (`.srt`) + Slide gốc | **Chuẩn 6 Tầng (1 Trụ cột cốt lõi = 1 Slide):** Tổng quan & 6 Thông điệp cốt lõi $\rightarrow$ 3–5 Slide Trụ cột 6 tầng (Chân lý, Cơ chế, Bẫy học viên hay mắc, Kỹ thuật bài tập, Tiêu chuẩn đạt DoD, Tự vấn) $\rightarrow$ Bảng khó khăn STAR $\rightarrow$ Checklist 7-30-90 ngày. |
+| **2. `book` (Đúc kết Sách)** | Sách `.pdf`, `.epub`, `.docx`, `.txt` hoặc audio sách nói | **Chuẩn 6 Tầng (1 Bài học/Chương = 1 Slide):** Bối cảnh & 6 Luận điểm gốc $\rightarrow$ Giải phẫu chi tiết toàn bộ các bài học theo Khung 6 Tầng (Axiom, Mechanism, Pitfall, Drill, DoD, Reflection) $\rightarrow$ Case study $\rightarrow$ Checklist hành động & Tóm tắt 1 trang. |
 | **3. `document` (Tài liệu / SOP)** | File `.pdf`, `.docx`, `.md`, báo cáo thị trường, quy trình nội bộ | **5 Phần:** Tóm tắt điều hành (Executive Summary) $\rightarrow$ Hệ thống Khái niệm, Số liệu & Quy trình lõi $\rightarrow$ Ma trận phân tích rủi ro & điểm nghẽn $\rightarrow$ Giải pháp theo nguyên nhân gốc $\rightarrow$ Checklist thực thi & KPIs. |
-
 ---
 
 ## 2. Danh Mục 20 Phong Cách Slide PDF (Mặc định: 01-Quiet-Luxury)
@@ -42,16 +41,23 @@ Chi tiết thông số màu sắc, font chữ và câu lệnh tạo ảnh xem t�
 
 ## 3. Quy Trình Vận Hành Chuẩn 5 Bước
 
+<critical>
+### NGUYÊN TẮC CỐT LÕI (MANDATORY GATEKEEPER):
+**BẮT BUỘC TRẢ VĂN BẢN .MD TRƯỚC KHI TẠO SLIDE:**
+- Ở mọi chế độ (*Workshop*, *Book*, *Document*), AI BẮT BUỘC phải biên soạn hoàn thiện, chuyên sâu và gửi bản đúc kết (`.md`) cho người dùng duyệt, góp ý trước khi tiến hành bất kỳ bước tạo slide nào.
+- Tuyệt đối KHÔNG nhảy cóc sang thiết kế, tạo mã nguồn HTML hay xuất file Slide PDF khi người dùng chưa đọc và duyệt nội dung đúc kết `.md`.
+</critical>
+
 ```text
 [Bước 1: Tiếp nhận & Phân loại Đầu vào]
   ├── Workshop: transcribe_batch.py (Bóc sub GPU local) + extract_and_crop.py
   ├── Sách / Tài liệu: read_document.py (Trích xuất văn bản từ PDF, DOCX, TXT)
         ↓
 [Bước 2: Soạn thảo Bản Đúc Kết (.md) theo đúng Mode (Workshop/Book/Document)]
-  └── Tự động chuẩn hóa Từ điển tên riêng -> Xuất bản Text sạch -> Gửi duyệt
-        ↓
+  └── Tự động chuẩn hóa Từ điển tên riêng -> Xuất bản Text sạch -> GỬI DUYỆT BẮT BUỘC
+        ↓ (CHỈ TIẾP TỤC SAU KHI USER DUYỆT NỘI DUNG .MD)
 [Bước 3: Chọn Phong Cách Slide (Mặc định: 01-quiet-luxury hoặc 1 trong 20 styles)]
-  └── Render 1 trang tiêu biểu kiểm tra bố cục & màu sắc -> Gửi duyệt
+  └── Render 1 trang tiêu biểu kiểm tra bố cục & màu sắc -> Gửi duyệt phong cách
         ↓
 [Bước 4: Xuất Full Slide PDF (16:9 qua build_luxury_pdf.py)]
   └── Kiểm tra nghiêm ngặt không trùng lặp, không tràn khung -> In PDF qua Chrome
@@ -59,7 +65,6 @@ Chi tiết thông số màu sắc, font chữ và câu lệnh tạo ảnh xem t�
 [Bước 5: Đóng gói & Gom Thư Mục Hoàn Chỉnh]
   └── Gom toàn bộ file vào thư mục buổi học / sách tương ứng
 ```
-
 ---
 
 ## 4. Hướng Dẫn Sử Dụng Bộ Scripts Kỹ Thuật
