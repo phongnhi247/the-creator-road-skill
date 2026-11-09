@@ -1,0 +1,8 @@
+# Thư viện AI nhận diện giọng nói GPU offline (nhanh gấp 5 lần Whisper thường)
+faster-whisper>=1.0.0
+
+# Thư viện xử lý PDF và trích xuất/crop ảnh chuyên nghiệp
+pymupdf>=1.24.0
+
+# Thư viện xử lý mảng âm thanh
+numpy>=1.24.0

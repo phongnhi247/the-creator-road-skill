@@ -1,0 +1,40 @@
+# Bỏ qua toàn bộ thư mục dữ liệu nội bộ các buổi học
+Buoi-*/
+Buoi-*
+[Bb]uoi-*/
+[Bb]uoi-*
+
+# Bỏ qua tài liệu Kaizen nội bộ
+KAIZEN_SOP_THE_CREATOR_ROAD.md
+
+# Bỏ qua các file video và audio nặng
+*.mp4
+*.MP4
+*.mkv
+*.mov
+*.MOV
+*.avi
+*.m4a
+*.mp3
+*.wav
+
+# Bỏ qua môi trường ảo Python
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+
+# Bỏ qua file rác hệ thống & editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.tmp
+*.log
+
+# Bỏ qua file nháp HTML trung gian
+*_Quiet_Luxury.html
+check_png/
+pdf_check/
+preview/

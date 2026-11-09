@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  @page { size: 1920px 1080px; margin: 0; }
+  body {
+    width: 1920px;
+    background: #09080C;
+    color: #F3EFEA;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .slide {
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    background: radial-gradient(circle at 22% 18%, #1A1625 0%, #0E0C14 55%, #09080C 100%);
+    position: relative;
+    page-break-after: always;
+    break-after: page;
+  }
+  .outer-frame {
+    position: absolute;
+    inset: 32px;
+    border: 1px solid rgba(212, 182, 124, 0.22);
+    pointer-events: none;
+    z-index: 10;
+  }
+  .outer-frame::before {
+    content: "";
+    position: absolute;
+    inset: 6px;
+    border: 1px solid rgba(212, 182, 124, 0.07);
+  }
+  .slide-inner {
+    width: 100%;
+    height: 100%;
+    padding: 60px 82px 52px 82px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(212, 182, 124, 0.2);
+    flex-shrink: 0;
+  }
+  .brand-tag {
+    font-size: 12.5px;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: #D4B67C;
+    font-weight: 600;
+  }
+  .section-tag {
+    font-size: 12.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #A69D8E;
+    font-weight: 400;
+  }
+  .bottom-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 14px;
+    border-top: 1px solid rgba(212, 182, 124, 0.15);
+    font-size: 12.5px;
+    color: #8A8275;
+    letter-spacing: 0.12em;
+    flex-shrink: 0;
+  }
+  .page-num {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+    font-size: 19px;
+    color: #D4B67C;
+    letter-spacing: 0.08em;
+  }
+  .main-grid {
+    display: grid;
+    grid-template-columns: 1.48fr 0.92fr;
+    gap: 56px;
+    align-items: center;
+    flex: 1;
+    margin: 22px 0;
+    min-height: 0;
+  }
+  .main-full {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    flex: 1;
+    margin: 18px 0;
+    min-height: 0;
+  }
+  .left-col {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .eyebrow {
+    font-size: 13px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #C5A567;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .eyebrow::before {
+    content: "";
+    display: inline-block;
+    width: 28px;
+    height: 1px;
+    background: #C5A567;
+  }
+  h1 {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 1.12;
+    color: #F7F3EB;
+  }
+  h1 span {
+    color: #D4B67C;
+    font-style: italic;
+    font-weight: 400;
+  }
+  .lead-box {
+    background: linear-gradient(90deg, rgba(212, 182, 124, 0.1) 0%, rgba(212, 182, 124, 0.02) 100%);
+    border-left: 2px solid #D4B67C;
+    padding: 14px 20px;
+    font-size: 16.5px;
+    line-height: 1.52;
+    color: #E6E0D6;
+  }
+  .lead-box strong { color: #F7F3EB; font-weight: 600; }
+  .sub-label {
+    font-size: 12.5px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #D4B67C;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  .card-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .card-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .card-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .card {
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(212, 182, 124, 0.16);
+    padding: 15px 18px;
+    border-radius: 4px;
+  }
+  .card-num {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+    font-size: 21px;
+    color: #D4B67C;
+    font-style: italic;
+    margin-bottom: 4px;
+  }
+  .card-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #F4EFE6;
+    margin-bottom: 6px;
+  }
+  .card-text {
+    font-size: 14px;
+    line-height: 1.48;
+    color: #C2B9AC;
+  }
+  .panel-box {
+    background: rgba(18, 15, 26, 0.78);
+    border: 1px solid rgba(212, 182, 124, 0.2);
+    padding: 16px 20px;
+    border-radius: 4px;
+  }
+  .q-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 11px 22px;
+  }
+  .q-item {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    font-size: 14.4px;
+    line-height: 1.46;
+    color: #DFD9CE;
+  }
+  .q-idx {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #D4B67C;
+    min-width: 24px;
+  }
+  .right-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  .art-frame {
+    padding: 12px;
+    border: 1px solid rgba(212, 182, 124, 0.35);
+    background: rgba(10, 9, 14, 0.92);
+    box-shadow: 0 24px 52px rgba(0, 0, 0, 0.65), 0 0 36px rgba(212, 182, 124, 0.06);
+  }
+  .art-frame img {
+    display: block;
+    height: 770px;
+    width: auto;
+    object-fit: contain;
+    border: 1px solid rgba(212, 182, 124, 0.15);
+  }
+  table.lux-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.015);
+    border: 1px solid rgba(212, 182, 124, 0.2);
+  }
+  table.lux-table th {
+    text-align: left;
+    padding: 10px 14px;
+    background: rgba(212, 182, 124, 0.12);
+    color: #D4B67C;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(212, 182, 124, 0.25);
+  }
+  table.lux-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid rgba(212, 182, 124, 0.1);
+    color: #DFD9CE;
+    line-height: 1.44;
+    vertical-align: top;
+  }
+  table.lux-table td strong { color: #F7F3EB; }
+  ul.lux-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+  ul.lux-list li {
+    font-size: 14px;
+    line-height: 1.46;
+    color: #D6CFC3;
+    padding-left: 16px;
+    position: relative;
+  }
+  ul.lux-list li::before {
+    content: "◆";
+    position: absolute;
+    left: 0;
+    color: #D4B67C;
+    font-size: 10px;
+    top: 3px;
+  }
+  ul.lux-list li strong { color: #F4EFE6; }
+</style>
+</head>
+<body>
+<!-- SLIDES_INJECT_POINT -->
+</body>
+</html>
