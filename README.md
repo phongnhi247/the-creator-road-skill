@@ -7,34 +7,50 @@ Bộ công cụ tự động hóa quy trình biến mọi tư liệu đầu vào
 
 ---
 
-## 1. CÀI ĐẶT NHANH (CHỈ 3 BƯỚC ĐƠN GIẢN)
+## 1. HƯỚNG DẪN CÀI ĐẶT TỪ A–Z CHO NGƯỜI MỚI (5 BƯỚC CHUẨN)
 
-Đã loại bỏ toàn bộ các bước cài đặt phức tạp không cần thiết (không cần cài Chrome vì máy tính Windows đã có sẵn Edge).
+```text
+[Bước 1: Cài Git & Python] ➔ [Bước 2: Kéo dự án về máy] ➔ [Bước 3: Bấm cài thư viện] ➔ [Bước 4: Lấy Key & Antigravity] ➔ [Bước 5: Mở ra & Gõ lệnh chạy]
+```
 
-### Bước 1: Kéo bộ công cụ về máy
-Chọn 1 trong 2 cách:
-- **Cách 1 (Dùng Git — Khuyến nghị):** Mở cửa sổ dòng lệnh và gõ lệnh kéo thẳng từ trang này về máy:
+### Bước 1: Cài đặt 2 phần mềm nền tảng (Chỉ làm 1 lần duy nhất)
+1. **Cài Git (để tải và cập nhật code):**
+   - Tải bản 64-bit tại: [git-scm.com/downloads/win](https://git-scm.com/downloads/win) $\rightarrow$ Cứ bấm *Next* liên tục đến khi hoàn tất.
+2. **Cài Python (để chạy các công cụ AI):**
+   - Tải tại: [python.org/downloads](https://www.python.org/downloads/) (chọn bản 3.10 – 3.12).
+   - ⚠️ **LƯU Ý QUAN TRỌNG:** Ở màn hình cài đặt đầu tiên, bắt buộc phải **TÍCH CHỌN** vào ô:
+     `☑ Add python.exe to PATH` *(nếu quên tích ô này, máy sẽ không nhận diện được lệnh python).*
+
+### Bước 2: Kéo bộ công cụ về máy tính
+- Mở thư mục bạn muốn lưu dự án trên máy (ví dụ ổ `D:\Project` hoặc thư mục làm việc).
+- Nhấp chuột phải chọn **Open in Terminal** (hoặc mở PowerShell) và gõ lệnh:
   ```bash
   git clone https://github.com/phongnhi247/the-creator-road-skill.git
   ```
-- **Cách 2 (Không dùng Git):** Bấm vào nút xanh **`Code`** ở góc trên bên phải trang này $\rightarrow$ Chọn **`Download ZIP`** rồi giải nén ra thư mục bất kỳ.
+- *(Nếu không dùng Git: Bấm nút xanh **`Code`** ở góc trên bên phải trang GitHub này $\rightarrow$ Chọn **`Download ZIP`** rồi giải nén ra).*
 
-### Bước 2: Cài đặt thư viện tự động (1 chạm)
-- Đảm bảo máy đã cài **Python** (tải tại [python.org](https://www.python.org/downloads/), nhớ tích chọn `☑ Add python.exe to PATH`).
-- Bấm đúp chuột vào file **`cai_dat_thu_vien.bat`** nằm ở thư mục gốc $\rightarrow$ máy sẽ tự động cài toàn bộ thư viện cần thiết.
+### Bước 3: Cài đặt thư viện tự động (1 chạm chuột)
+- Mở thư mục `the-creator-road-skill` vừa tải về máy.
+- Bấm đúp chuột vào file **`cai_dat_thu_vien.bat`** nằm ở thư mục gốc.
+- Cửa sổ màu đen sẽ tự động cài toàn bộ thư viện. Khi thấy hiện chữ *"HOÀN TẤT CÀI ĐẶT!"* thì bấm phím bất kỳ để tắt đi.
 
-### Bước 3: Cài đặt Google Antigravity & Kết nối Trợ lý AI
-- **Phần mềm AI khuyến nghị:** Cài đặt và sử dụng **Google Antigravity** (môi trường lập trình & trợ lý AI Agent tối ưu nhất cho Gemini) để mở thư mục dự án và điều phối toàn bộ bộ skill này.
-- **Lấy Gemini API Key miễn phí:**
-  1. Vào [Google AI Studio (aistudio.google.com)](https://aistudio.google.com/) đăng nhập Gmail.
-  2. Bấm **"Get API key"** $\rightarrow$ Tạo Key và copy mã.
-  3. Tạo 1 file tên `.env` trong thư mục dự án và dán vào:
+### Bước 4: Lấy Gemini API Key & Cài Google Antigravity
+1. **Lấy Key AI miễn phí:**
+   - Vào [Google AI Studio (aistudio.google.com)](https://aistudio.google.com/) đăng nhập tài khoản Google (Gmail).
+   - Bấm nút **"Get API key"** $\rightarrow$ Bấm **"Create API key"** $\rightarrow$ Copy mã Key vừa tạo.
+2. **Lưu Key vào dự án:**
+   - Trong thư mục `the-creator-road-skill`, tạo một file tên là `.env` và dán dòng sau vào:
      ```env
-     GEMINI_API_KEY=ma_key_cua_ban
+     GEMINI_API_KEY=mã_key_bạn_vừa_copy
      ```
+3. **Cài đặt Google Antigravity:** Cài đặt và sử dụng Google Antigravity làm môi trường làm việc chính cho Gemini.
 
-*(Lưu ý tùy chọn: Nếu bạn muốn tự bóc băng video nặng 4–10 GB trực tiếp trên máy bằng card đồ họa GPU, hãy cài thêm [FFmpeg](https://www.gyan.dev/ffmpeg/builds/) qua lệnh PowerShell `winget install Gyan.FFmpeg`).*
+### Bước 5: Mở ra và Bắt đầu dùng
+1. Mở **Google Antigravity** $\rightarrow$ Chọn **File $\rightarrow$ Open Folder** $\rightarrow$ Chọn thư mục `the-creator-road-skill`.
+2. Thả tài liệu cần đúc kết vào thư mục bài học (ví dụ `Buoi-3/`).
+3. Gõ câu lệnh mẫu ở **Mục 3** bên dưới vào khung chat để AI tự động xuất ra bản đúc kết `.md` và Slide PDF Quiet Luxury!
 
+*(Tùy chọn nâng cao: Nếu muốn tự bóc băng video nặng 4–10 GB bằng GPU máy mình, cài thêm [FFmpeg](https://www.gyan.dev/ffmpeg/builds/) qua lệnh PowerShell `winget install Gyan.FFmpeg`).*
 ---
 
 ## 2. BA CHẾ ĐỘ ĐÚC KẾT & 20 PHONG CÁCH SLIDE
