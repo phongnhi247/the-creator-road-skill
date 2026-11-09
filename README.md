@@ -9,11 +9,15 @@ Bộ công cụ tự động hóa quy trình biến mọi tư liệu đầu vào
 
 ## 1. CÀI ĐẶT NHANH (CHỈ 3 BƯỚC ĐƠN GIẢN)
 
-Đã loại bỏ toàn bộ các bước cài đặt phần mềm phức tạp không cần thiết (không cần cài Git, không cần cài Chrome vì máy tính đã có sẵn Edge).
+Đã loại bỏ toàn bộ các bước cài đặt phức tạp không cần thiết (không cần cài Chrome vì máy tính Windows đã có sẵn Edge).
 
-### Bước 1: Tải bộ công cụ về máy
-- Bấm vào nút xanh **`Code`** ở góc trên bên phải trang GitHub này $\rightarrow$ Chọn **`Download ZIP`**.
-- Giải nén file ZIP ra thư mục bất kỳ trên máy tính của bạn.
+### Bước 1: Kéo bộ công cụ về máy
+Chọn 1 trong 2 cách:
+- **Cách 1 (Dùng Git — Khuyến nghị):** Mở cửa sổ dòng lệnh và gõ lệnh kéo thẳng từ trang này về máy:
+  ```bash
+  git clone https://github.com/phongnhi247/the-creator-road-skill.git
+  ```
+- **Cách 2 (Không dùng Git):** Bấm vào nút xanh **`Code`** ở góc trên bên phải trang này $\rightarrow$ Chọn **`Download ZIP`** rồi giải nén ra thư mục bất kỳ.
 
 ### Bước 2: Cài đặt thư viện tự động (1 chạm)
 - Đảm bảo máy đã cài **Python** (tải tại [python.org](https://www.python.org/downloads/), nhớ tích chọn `☑ Add python.exe to PATH`).
