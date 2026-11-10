@@ -4,6 +4,13 @@ Buoi-*
 [Bb]uoi-*/
 [Bb]uoi-*
 
+# Bỏ qua dữ liệu sách, bài làm và hình ảnh xuất bản cá nhân
+[Ss]ách/
+[Ss]ach/
+sample_*.png
+check_slide_*.png
+test_*.png
+*.pdf
 # Bỏ qua tài liệu Kaizen nội bộ
 KAIZEN_SOP_THE_CREATOR_ROAD.md
 
