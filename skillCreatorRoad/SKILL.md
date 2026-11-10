@@ -60,8 +60,7 @@ Chi tiết thông số màu sắc, font chữ và câu lệnh tạo ảnh xem t�
   └── Render 1 trang tiêu biểu kiểm tra bố cục & màu sắc -> Gửi duyệt phong cách
         ↓
 [Bước 4: Xuất Full Slide PDF (16:9 qua build_luxury_pdf.py)]
-  └── Kiểm tra nghiêm ngặt không trùng lặp, không tràn khung -> In PDF qua Chrome
-        ↓
+  └── Đảm bảo tính đồng nhất 100% giữa các slide (Font, Lining-nums, Căn giữa dọc, Cỡ chữ, Màu sắc chuẩn) -> In PDF qua Chrome
 [Bước 5: Đóng gói & Gom Thư Mục Hoàn Chỉnh]
   └── Gom toàn bộ file vào thư mục buổi học / sách tương ứng
 ```

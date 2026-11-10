@@ -84,7 +84,7 @@ Mỗi slide bài học (từ Bài 01 đến Bài 24) được chia đôi theo t�
 * **3. Bẫy sai lầm phổ biến (Pitfall):**  
   Thả lỏng cơ thể nhưng để tâm trí rơi vào trạng thái lơ mơ ngủ gật thay vì tỉnh thức sáng suốt.
 * **4. Kỹ thuật huấn luyện tuần (Drill):**  
-  Ngồi yên và ra lệnh **thả lỏng tuần tự từng nhóm cơ**: ngón chân $\rightarrow$ bắp chân $\rightarrow$ đùi $\rightarrow$ bụng $\rightarrow$ ngực $\rightarrow$ cánh tay $\rightarrow$ cổ $\rightarrow$ cơ mặt. Trút bỏ 100% sự căng cứng.
+  Ngồi yên và ra lệnh **thả lỏng tuần tự từng nhóm cơ**: ngón chân → bắp chân → đùi → bụng → ngực → cánh tay → cổ → cơ mặt. Trút bỏ 100% sự căng cứng.
 * **5. Tiêu chuẩn nghiệm thu (Mastery Check):**  
   Cảm nhận toàn bộ trọng lượng cơ thể như hòa tan vào chiếc ghế; tâm trí tỉnh táo, không còn một thớ cơ nào co thắt.
 * **6. Câu hỏi tự vấn (Reflection):**  
@@ -446,7 +446,7 @@ Mỗi slide bài học (từ Bài 01 đến Bài 24) được chia đôi theo t�
 ## III. TỔNG KẾT BỘ SLIDE DỰ KIẾN (27 SLIDES)
 
 1. **Slide 01:** Bìa chính (The Master Key System — 24 Bài Học Thần Kỳ Nhất Thế Giới)
-2. **Slide 02:** Khung vận hành & Mô hình chuyển hóa năng lượng (Ý thức $\rightarrow$ Tiềm thức $\rightarrow$ Hiện thực)
+2. **Slide 02:** Khung vận hành & Mô hình chuyển hóa năng lượng (Ý thức → Tiềm thức → Hiện thực)
 3. **Slide 03 – Slide 26:** **24 Slide chi tiết tương ứng đúng 24 Bài học** (Mỗi bài 1 slide trọn vẹn 6 tầng theo bố cục 2 cột)
 4. **Slide 27:** Bản đồ lộ trình thực hành 24 tuần & Lời kết đúc kết hành động
 

@@ -76,3 +76,12 @@ $$\text{Revenue (Doanh thu)} = \text{Trust (Niềm tin & Mối quan hệ)} + \te
 7. **KHÔNG TRÙNG LẶP NỘI DUNG:** Mỗi trang slide PDF mang 1 trọng tâm độc lập, không lặp lại trang trước.
 8. **QUẢN LÝ THƯ MỤC:** Gom toàn bộ tài liệu đầu vào/đầu ra vào đúng thư mục `Buoi-X (DD - MM - YYYY)/`.
 9. **BẮT BUỘC TRẢ BẢN .MD TRƯỚC KHI TẠO SLIDE:** Luôn luôn hoàn thiện bản đúc kết chuyên sâu `.md` để người dùng thẩm định và phê duyệt trước khi thiết kế bất kỳ slide nào.
+10. **TÍNH ĐỒNG NHẤT TUYỆT ĐỐI GIỮA CÁC SLIDE (Cross-Slide Consistency):**
+    - **Typography đồng nhất 100%:** Toàn bộ tiêu đề bài học trên 100% các slide phải dùng cùng một phông chữ, cùng trọng số (*weight*), cùng kiểu dáng (tuyệt đối không để slide này dùng phông khác hoặc bị nghiêng/lệch so với slide kia). Bắt buộc bật `font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1;` để số thứ tự (ví dụ `01:`, `02:`) đứng thẳng trên đường chân chữ (*baseline*) và có chiều cao bằng đúng chữ cái in hoa `BÀI`.
+    - **Cỡ chữ & Phân cấp thị giác:** Kích thước chữ phải đủ lớn cho màn hình trình chiếu 16:9 (Body $\ge$ 15.5px–16.5px, Tiêu đề chính $\ge$ 38px–42px, Tiêu đề phụ $\ge$ 15.5px–17.5px), tuyệt đối không để chữ bé li ti gây mỏi mắt.
+    - **Căn giữa dọc đối xứng:** Các nhãn bước (`BƯỚC 1`, `BƯỚC 2`) và thẻ cấp độ (`CẤP 1`, `CẤP 2`) phải được căn giữa dọc tuyệt đối (`align-items: center`) so với khối văn bản bên cạnh, không để nhãn bị kéo lệch lên mép trên.
+    - **Thẻ cấp độ xuống dòng:** Với các thẻ cấp độ như `CẤP 1 (THÂN)` hay `CẤP 1 (KỸ THUẬT)`, phần chữ trong ngoặc đơn bắt buộc phải xuống dòng và căn giữa cân đối bên trong thẻ.
+    - **Màu sắc & Thẩm mỹ chuẩn mực:** Tuân thủ triệt để bảng màu phong cách chỉ định (ví dụ phong cách Zen: đơn sắc hữu cơ/trầm ấm; tuyệt đối cấm dùng màu traffic-light đỏ, vàng, xanh chói lóa).
+    - **Tinh gọn, loại bỏ text rườm rà:** Xóa bỏ toàn bộ các nhãn meta thừa, dòng chú thích phong cách vụn vặt ở footer hoặc các huy hiệu tự xưng rườm rà ở trang bìa để giữ slide thoáng đãng, sang trọng.
+    - **Kỹ thuật đóng thẻ & Mã rác:** Kiểm soát nghiêm ngặt thẻ đóng HTML (`</em>`, `</i>`), tuyệt đối không để rò rỉ thuộc tính in nghiêng sang các slide sau; quét sạch toàn bộ mã raw LaTeX rác (`$\rightarrow$`) và chuyển thành ký tự Unicode chuẩn (`→`).
+    - **Font độc lập & Nhúng trực tiếp:** Ưu tiên nhúng trực tiếp font Base64 hoặc phông chữ cục bộ để không phụ thuộc mạng, đảm bảo hiển thị đồng nhất 100% trên mọi thiết bị và khi in PDF.
