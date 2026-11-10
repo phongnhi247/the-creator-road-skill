@@ -1,9 +1,9 @@
-# BỘ CÔNG CỤ ĐÚC KẾT SÁCH, TÀI LIỆU, BUỔI HỌC & XUẤT SLIDE PDF 20 PHONG CÁCH
+# BỘ CÔNG CỤ ĐÚC KẾT SÁCH, TÀI LIỆU, BUỔI HỌC & XUẤT SLIDE PDF 50 PHONG CÁCH
 ### The Creator Road & Distillation Studio (Tối ưu cho Google Antigravity & Gemini)
 
 Bộ công cụ tự động hóa quy trình biến mọi tư liệu đầu vào (**Video Zoom/DJI**, **File ghi âm**, **Phụ đề `.srt`**, **Sách `.pdf`/`.epub`**, **Tài liệu/Báo cáo/SOP**) thành:
 1. **Bản đúc kết chuyên sâu (`.md`):** Chuẩn hóa nội dung, loại bỏ lan man, tự động sửa lỗi chính tả giọng nói.
-2. **Bộ Slide PDF Widescreen 16:9 (`.pdf`):** Hỗ trợ **20 phong cách chuyên nghiệp** (mặc định là **`01-quiet-luxury`** Obsidian & Champagne Gold, cùng *Apple Bento, McKinsey, Harvard Review, Dark Academia, v.v.*), font tiếng Việt không lỗi dấu, tự động crop ảnh gốc sạch mép.
+2. **Bộ Slide PDF Widescreen 16:9 (`.pdf`):** Hỗ trợ **50 phong cách chuyên nghiệp** (mặc định là **`01-quiet-luxury`** Obsidian & Champagne Gold, cùng *Apple Bento, McKinsey, Harvard Review, Bloomberg, SpaceX, Cyberpunk, v.v.*), font tiếng Việt không lỗi dấu, tự động crop ảnh gốc sạch mép.
 
 ---
 
@@ -53,21 +53,21 @@ Bộ công cụ tự động hóa quy trình biến mọi tư liệu đầu vào
 *(Tùy chọn nâng cao: Nếu muốn tự bóc băng video nặng 4–10 GB bằng GPU máy mình, cài thêm [FFmpeg](https://www.gyan.dev/ffmpeg/builds/) qua lệnh PowerShell `winget install Gyan.FFmpeg`).*
 ---
 
-## 2. BA CHẾ ĐỘ ĐÚC KẾT & 20 PHONG CÁCH SLIDE
+## 2. BA CHẾ ĐỘ ĐÚC KẾT & 50 PHONG CÁCH SLIDE
 
 ### 2.1. Ba Chế Độ Đúc Kết
 1. **`workshop` (Mặc định):** Đúc kết buổi học, khóa đào tạo, coaching, họp chiến lược (Video/Audio/Sub) $\rightarrow$ Khung 5 phần chuẩn Kaizen.
 2. **`book`:** Đúc kết sách giấy, ebook, sách nói $\rightarrow$ Trích xuất mô hình cốt lõi, case study đắt giá, giới hạn áp dụng và kế hoạch chuyển hóa 7–30–90 ngày.
 3. **`document`:** Đúc kết tài liệu SOP, báo cáo nghiên cứu $\rightarrow$ Tóm tắt điều hành (Executive Summary), ma trận rủi ro và checklist thực thi.
 
-### 2.2. Danh Mục 20 Phong Cách Slide PDF (Mặc định: 01-Quiet-Luxury)
-- **Luxury & Editorial:** `01-quiet-luxury` *(Mặc định)*, `02-warm-cashmere`, `03-kinfolk-editorial`, `04-dark-academia`.
-- **Executive & Consulting:** `05-mckinsey-executive`, `06-harvard-review`, `07-private-wealth`, `08-swiss-grid`.
-- **Tech & Modern Bento:** `09-apple-bento`, `10-linear-dark-glass`, `11-vox-explainer`, `12-cyber-matrix`.
-- **Creative & Storytelling:** `13-journal-collage`, `14-ukiyo-zen`, `15-watercolor-healing`, `16-vintage-patent`.
-- **High-Impact & Action:** `17-ted-spotlight`, `18-ironman-athletic`, `19-chalkboard-masterclass`, `20-monochrome-brutalist`.
+### 2.2. Danh Mục 50 Phong Cách Slide PDF (Mặc định: 01-Quiet-Luxury)
+- **Luxury & Editorial (10 phong cách):** `01-quiet-luxury` *(Mặc định)*, `02-warm-cashmere`, `03-kinfolk-editorial`, `04-dark-academia`, `21-haute-couture`, `22-old-money-yacht`, `23-wabi-sabi-clay`, `24-renaissance-vellum`, `25-art-deco-gatsby`, `26-botanical-herbarium`.
+- **Executive & Consulting (10 phong cách):** `05-mckinsey-executive`, `06-harvard-review`, `07-private-wealth`, `08-swiss-grid`, `27-bloomberg-terminal`, `28-financial-times`, `29-supreme-court`, `30-bain-bridge`, `31-venture-capital`, `32-esg-sustainable`.
+- **Tech & Modern Bento (10 phong cách):** `09-apple-bento`, `10-linear-dark-glass`, `11-vox-explainer`, `12-cyber-matrix`, `33-cyberpunk-neon`, `34-open-source-terminal`, `35-spacex-aerospace`, `36-quantum-prism`, `37-notion-minimalist`, `38-stripe-fintech`.
+- **Creative & Storytelling (10 phong cách):** `13-journal-collage`, `14-ukiyo-zen`, `15-watercolor-healing`, `16-vintage-patent`, `39-film-noir-cinema`, `40-bauhaus-primary`, `41-retro-synthwave`, `42-pop-art-warhol`, `43-comic-manga-noir`, `44-claymorphism-3d`.
+- **High-Impact & Action (10 phong cách):** `17-ted-spotlight`, `18-ironman-athletic`, `19-chalkboard-masterclass`, `20-monochrome-brutalist`, `45-clinical-medical`, `46-national-geographic`, `47-mind-palace-blueprint`, `48-montessori-playful`, `49-museum-archive`, `50-zen-monastery`.
 
-*(Chi tiết thông số màu sắc và font chữ xem tại file `skillCreatorRoad/references/style_gallery_guide.md`).*
+*(Chi tiết thông số màu sắc, font chữ và catalog đầy đủ xem tại file `skillCreatorRoad/references/style_gallery_guide.md`).*
 
 ---
 

@@ -1,18 +1,18 @@
 ---
 name: creator-road
-description: "Quy trình trọn gói tự động đúc kết Buổi học (Workshop), Sách (Book) và Tài liệu (Document) thành Bản đúc kết chuyên sâu (.md) sạch và Bộ Slide PDF Widescreen 16:9 với 20 phong cách chuyên nghiệp (Mặc định: 01-quiet-luxury; cùng 19 phong cách McKinsey, Apple Bento, Harvard, Dark Academia, v.v.). Không lỗi font tiếng Việt, không tràn khung, tự động crop ảnh gốc."
+description: "Quy trình trọn gói tự động đúc kết Buổi học (Workshop), Sách (Book) và Tài liệu (Document) thành Bản đúc kết chuyên sâu (.md) sạch và Bộ Slide PDF Widescreen 16:9 với 50 phong cách chuyên nghiệp (Mặc định: 01-quiet-luxury; cùng 49 phong cách McKinsey, Apple Bento, Harvard, Bloomberg, SpaceX, Cyberpunk, v.v.). Không lỗi font tiếng Việt, không tràn khung, tự động crop ảnh gốc."
 category: content-distillation
 keywords: [creator-road, book-summary, document-distillation, quiet-luxury, mckinsey-slides, bento-grid, star-method, presentation-pdf]
 metadata:
   author: creator-road-core
-  version: "2.0.0"
+  version: "2.1.0"
 ---
 
-# Skill: `creator-road` — Đúc Kết Sách, Tài Liệu & Slide PDF 20 Phong Cách
+# Skill: `creator-road` — Đúc Kết Sách, Tài Liệu & Slide PDF 50 Phong Cách
 
 Skill này chuẩn hóa toàn bộ quy trình tiếp nhận nguyên liệu đa định dạng (**Workshop**, **Sách**, **Tài liệu/Báo cáo/SOP**), bóc tách tri thức lõi và xuất bản tài liệu kép:
 1. **Bản đúc kết chuyên sâu (`.md`):** Tự động điều chỉnh theo 3 chế độ (*Workshop*, *Book*, *Document*), loại bỏ lan man, tự động sửa lỗi chính tả giọng nói theo Từ điển nội bộ.
-2. **Bộ Slide PDF Widescreen 16:9 (`.pdf`):** Hỗ trợ **20 phong cách thiết kế chuyên nghiệp** (mặc định là **`01-quiet-luxury`** chuẩn mực, không bao giờ thay đổi), không lỗi font, không tràn chữ, tự động ghép ảnh minh họa sạch mép.
+2. **Bộ Slide PDF Widescreen 16:9 (`.pdf`):** Hỗ trợ **50 phong cách thiết kế chuyên nghiệp** (mặc định là **`01-quiet-luxury`** chuẩn mực, không bao giờ thay đổi), không lỗi font, không tràn chữ, tự động ghép ảnh minh họa sạch mép.
 
 ---
 
@@ -27,15 +27,15 @@ Skill tự động nhận diện hoặc nhận chỉ định chế độ qua câ
 | **3. `document` (Tài liệu / SOP)** | File `.pdf`, `.docx`, `.md`, báo cáo thị trường, quy trình nội bộ | **5 Phần:** Tóm tắt điều hành (Executive Summary) $\rightarrow$ Hệ thống Khái niệm, Số liệu & Quy trình lõi $\rightarrow$ Ma trận phân tích rủi ro & điểm nghẽn $\rightarrow$ Giải pháp theo nguyên nhân gốc $\rightarrow$ Checklist thực thi & KPIs. |
 ---
 
-## 2. Danh Mục 20 Phong Cách Slide PDF (Mặc định: 01-Quiet-Luxury)
+## 2. Danh Mục 50 Phong Cách Slide PDF (Mặc định: 01-Quiet-Luxury)
 
 Chi tiết thông số màu sắc, font chữ và câu lệnh tạo ảnh xem tại `references/style_gallery_guide.md`:
 
-- **Nhóm Luxury & Editorial:** `01-quiet-luxury` *(Mặc định)*, `02-warm-cashmere`, `03-kinfolk-editorial`, `04-dark-academia`.
-- **Nhóm Executive & Consulting:** `05-mckinsey-executive`, `06-harvard-review`, `07-private-wealth`, `08-swiss-grid`.
-- **Nhóm Tech & Modern Bento:** `09-apple-bento`, `10-linear-dark-glass`, `11-vox-explainer`, `12-cyber-matrix`.
-- **Nhóm Creative & Storytelling:** `13-journal-collage`, `14-ukiyo-zen`, `15-watercolor-healing`, `16-vintage-patent`.
-- **Nhóm High-Impact & Action:** `17-ted-spotlight`, `18-ironman-athletic`, `19-chalkboard-masterclass`, `20-monochrome-brutalist`.
+- **Nhóm Luxury & Editorial (10 phong cách):** `01-quiet-luxury` *(Mặc định)*, `02-warm-cashmere`, `03-kinfolk-editorial`, `04-dark-academia`, `21-haute-couture`, `22-old-money-yacht`, `23-wabi-sabi-clay`, `24-renaissance-vellum`, `25-art-deco-gatsby`, `26-botanical-herbarium`.
+- **Nhóm Executive & Consulting (10 phong cách):** `05-mckinsey-executive`, `06-harvard-review`, `07-private-wealth`, `08-swiss-grid`, `27-bloomberg-terminal`, `28-financial-times`, `29-supreme-court`, `30-bain-bridge`, `31-venture-capital`, `32-esg-sustainable`.
+- **Nhóm Tech & Modern Bento (10 phong cách):** `09-apple-bento`, `10-linear-dark-glass`, `11-vox-explainer`, `12-cyber-matrix`, `33-cyberpunk-neon`, `34-open-source-terminal`, `35-spacex-aerospace`, `36-quantum-prism`, `37-notion-minimalist`, `38-stripe-fintech`.
+- **Nhóm Creative & Storytelling (10 phong cách):** `13-journal-collage`, `14-ukiyo-zen`, `15-watercolor-healing`, `16-vintage-patent`, `39-film-noir-cinema`, `40-bauhaus-primary`, `41-retro-synthwave`, `42-pop-art-warhol`, `43-comic-manga-noir`, `44-claymorphism-3d`.
+- **Nhóm High-Impact & Action (10 phong cách):** `17-ted-spotlight`, `18-ironman-athletic`, `19-chalkboard-masterclass`, `20-monochrome-brutalist`, `45-clinical-medical`, `46-national-geographic`, `47-mind-palace-blueprint`, `48-montessori-playful`, `49-museum-archive`, `50-zen-monastery`.
 
 ---
 

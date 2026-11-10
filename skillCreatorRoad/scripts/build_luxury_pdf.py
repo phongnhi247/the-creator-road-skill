@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-build_luxury_pdf.py — Nạp các slide HTML và xuất ra file PDF 16:9 theo 1 trong 20 phong cách chuyên nghiệp.
+build_luxury_pdf.py — Nạp các slide HTML và xuất ra file PDF 16:9 theo 1 trong 50 phong cách chuyên nghiệp.
 Hỗ trợ tham số `--style <style_id>` (mặc định: 01-quiet-luxury).
 Sử dụng Chrome/Edge headless native, đảm bảo không viền trắng và font Segoe UI / Palatino Linotype chuẩn 100%.
 """
@@ -85,7 +85,7 @@ def render_html_to_pdf(html_file: Path, pdf_file: Path, style_id: str = "01-quie
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Render Slide HTML to 16:9 PDF via Headless Browser with 20 Professional Themes")
+    parser = argparse.ArgumentParser(description="Render Slide HTML to 16:9 PDF via Headless Browser with 50 Professional Themes")
     parser.add_argument("html_in", help="Input HTML slide file")
     parser.add_argument("pdf_out", help="Output PDF file")
     parser.add_argument("--style", default="01-quiet-luxury", help="Style ID from styles_catalog.json (default: 01-quiet-luxury)")
